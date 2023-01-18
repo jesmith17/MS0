@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MS0
 Set of code assets for SA's to use when deliverying an MSO.
 
@@ -59,3 +60,6 @@ The intent is to create a simple object that can start to demonstrate the benefi
 The default is simply there to give you a fully connected starting place with working examples of a query, an insert, and an aggregation query. 
 
 
+=======
+# mongodb-sprint-zero
+>>>>>>> 3f5a5a3 (Create README.md)
