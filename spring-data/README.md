@@ -1,8 +1,9 @@
-# Java Sample App
+# Spring Data Sample App
 
 ## Purpose
 
-This app provides a working example of how to use Java and the MongoDB Sync Driver to connect to and work with data in your MongoDB database. 
+This app provides a working example of how to use Java + Spring Data and the MongoDB Sync Driver to connect to and work with data in your MongoDB database.
+This project uses the Spring-Boot and repository pattern to perform it's data acces pieces. This is in contrast to the Native java Driver from MongoDB. For details on that project see [java-sample](../java-sample/README.md)
 
 ## Demo Purposes Only
 
@@ -13,7 +14,7 @@ The code in this repository is not intended to be production ready. It is simply
 
 The project has the following dependencies
 
-* [Mongodb-driver-sync](https://www.mongodb.com/docs/drivers/java/sync/current/) version 4.9.0
+* [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/) version 3.0.3
 * [Spring-boot](https://spring.io/) - Spring boot is used simply to eliminate the need to also package a app server with the code base. This project makes use of Spring for dependency injection only. It DOES NOT use any of the spring-data approaches.
 * Java
 * Maven
