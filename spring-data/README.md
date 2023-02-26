@@ -1,8 +1,8 @@
-# .Net Core Sample App
+# Java Sample App
 
 ## Purpose
 
-This app provides a working example of how to use .Net Core and MongoDB 
+This app provides a working example of how to use Java and the MongoDB Sync Driver to connect to and work with data in your MongoDB database. 
 
 ## Demo Purposes Only
 
@@ -13,16 +13,16 @@ The code in this repository is not intended to be production ready. It is simply
 
 The project has the following dependencies
 
-* [MongoDB C# Driver](https://www.mongodb.com/docs/drivers/csharp/current/) version 2.19
-* [.Net Core 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) version 6 
-* [.Net CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/)
-
+* [Mongodb-driver-sync](https://www.mongodb.com/docs/drivers/java/sync/current/) version 4.9.0
+* [Spring-boot](https://spring.io/) - Spring boot is used simply to eliminate the need to also package a app server with the code base. This project makes use of Spring for dependency injection only. It DOES NOT use any of the spring-data approaches.
+* Java
+* Maven
 
 
 ## Running
 To run the project type 
 
-``` dotnet run ``` from the command line.
+``` mvn spring-boot:run ``` from the command line.
 
 You can also configure this command inside most popular IDE's as needed.
 
