@@ -5,6 +5,8 @@ import com.mongodb.ms0.example.javasample.models.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerService {
 
@@ -21,4 +23,7 @@ public class CustomerService {
         return dao.createCustomer(customer);
     }
 
+    public List<Customer> customerSearch(String name) {
+        return dao.customerSearch(name);
+    }
 }

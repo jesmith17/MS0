@@ -1,13 +1,14 @@
-package com.mongodb.ms0.example.javasample.controllers;
+package com.mongodb.ms0.example.springdata.controllers;
 
-import com.mongodb.ms0.example.javasample.models.Customer;
-import com.mongodb.ms0.example.javasample.service.CustomerService;
+import com.mongodb.ms0.example.springdata.models.Customer;
+import com.mongodb.ms0.example.springdata.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value="customer", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -19,7 +20,8 @@ public class CustomerController {
 
     @GetMapping(value="{id}")
     public Customer getCustomerById(@PathVariable("id") String id) {
-        return service.getCustomerById(id);
+        Optional<Customer> customer = service.getCustomerById(id);
+        return customer.orElse(null);
     }
 
     @PostMapping
