@@ -36,10 +36,12 @@ public class CustomerController : ControllerBase
     }
     
     [HttpPost("search")]
-    public Customer CustomerSearch([FromBody] String name)
+    public List<Customer> CustomerSearch([FromBody] Dictionary<String, String> request)
     {
-        return null;
-        //return this.service.CreateCustomer(customer);
+        String name = request.GetValueOrDefault("name");
+        Console.WriteLine(name);
+
+        return this.service.CustomerSearch(name);
     }
     
     

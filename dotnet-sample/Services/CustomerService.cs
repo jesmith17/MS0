@@ -38,5 +38,13 @@ public class CustomerService
         return customer;
     }
 
+    public List<Customer> CustomerSearch(String name)
+    {
+        List<Customer> results = _customerCollection.Aggregate()
+            .Match(Builders<Customer>.Filter.Or(Builders<Customer>.Filter.Eq("lastName", name),
+                Builders<Customer>.Filter.Eq("firstName", name))).ToList();
+        return results;
+    }
+
 
 }
