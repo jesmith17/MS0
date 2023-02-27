@@ -14,7 +14,7 @@ The code in this repository is not intended to be production ready. It is simply
 
 The project has the following dependencies
 
-* [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/) version 3.0.3
+* [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/) version 4.0.2
 * [Spring-boot](https://spring.io/) - Spring boot is used simply to eliminate the need to also package a app server with the code base. This project makes use of Spring for dependency injection only. It DOES NOT use any of the spring-data approaches.
 * Java
 * Maven
