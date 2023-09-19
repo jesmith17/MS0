@@ -8,16 +8,17 @@ Set of code assets to accelerat the MongoDB Sprint Zero process.
 ## Demo Purposes Only
 The code contained in this repository is intended simply to help boostrap the MongoDB Spring Zero process. The code works. but is **NOT PRODUCTION READY** and is not  intended to be.  
 
-MongoDB Sprint Zero is about helping your customers
- - Quickly start consuming credits
+MongoDB Sprint Zero is teams
+ - Quickly start interacting with the database and learning it's advantages. 
  - Be able to maintain momentum in their development and buying process
- - Help them have something to demonstrate the value at the end of the Sprint
+ - Help them have something to demonstrate the value at the end of the Sprint.
+
 
 
 ## How to Use
 
 1. Clone the Repo down to your local machine
-2. Identify which sample project is the best fit for your client
+2. Identify which sample project is the best fit for your use case
 3. Make any necessary pro-active changes. This includes potentially
    - Adding in customer business objects based on your clients needs
    - CSFLE configuration if that's critical for your customer
@@ -44,7 +45,7 @@ All of the project use essentially the same concept.
 Some level of Controller class that exposes a REST API for @ ``` /customer ``` for the teams to access via a tool like Postman. This isn't directly related to the DB, but does make the entire project feel more real and will simplify their work to create a demonstrable prototype. 
 
 #### Service
-A package for service classes that can contain any business logic that the cusotmer would perform. This is merely there to try to show some best practices for how to create a project. 
+A package for service classes that can contain any business logic that the application would need perform. This is package is merely there to try to show a separation of view and business logic.
 
 #### DAO / Repository
 This layer can have multiple names, but represents the data access layer of the project. .Net and Spring-Data will tend to use the repository pattern. 

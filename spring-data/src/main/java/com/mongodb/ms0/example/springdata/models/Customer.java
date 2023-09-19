@@ -2,6 +2,9 @@ package com.mongodb.ms0.example.springdata.models;
 
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -12,9 +15,11 @@ import java.util.List;
 We are explictly defining a value for the document annotation here because the collection is named differently than Spring-data's default. Spring assumes class name and collection name are the same. So the use of the plular for Customer requires this correction
  */
 @Document("customers")
+@Entity
 public class Customer {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private String id;
     private String firstName;
     private String lastName;

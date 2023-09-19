@@ -22,9 +22,6 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 @Service
 public class MongoDBConnection {
 
-    private MongoClient client;
-
-
     @Bean
     @Scope(value= ConfigurableBeanFactory.SCOPE_SINGLETON)
     public MongoClient mongoClient() {

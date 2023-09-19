@@ -1,6 +1,7 @@
 package com.mongodb.ms0.example.springdata.services;
 
 import com.mongodb.ms0.example.springdata.models.Customer;
+import com.mongodb.ms0.example.springdata.repository.CustomerMysqlRepository;
 import com.mongodb.ms0.example.springdata.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,9 @@ public class CustomerService {
 
     @Autowired
     private CustomerRepository repository;
+
+    @Autowired
+    private CustomerMysqlRepository mySQLrepository;
 
 
     public Optional<Customer> getCustomerById(String id) {
