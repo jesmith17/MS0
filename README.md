@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fd459b0 (Added my code to the shared repo)
 # MS0
 Set of code assets to accelerat the MongoDB Sprint Zero process. 
 
@@ -60,9 +56,3 @@ The intent is to create a simple object that can start to demonstrate the benefi
 The default is simply there to give you a fully connected starting place with working examples of a query, an insert, and an aggregation query. 
 
 
-<<<<<<< HEAD
-=======
-# mongodb-sprint-zero
->>>>>>> 3f5a5a3 (Create README.md)
-=======
->>>>>>> fd459b0 (Added my code to the shared repo)
