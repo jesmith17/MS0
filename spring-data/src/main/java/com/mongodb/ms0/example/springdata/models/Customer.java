@@ -1,13 +1,10 @@
 package com.mongodb.ms0.example.springdata.models;
 
-
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.util.List;
 
@@ -18,15 +15,33 @@ We are explictly defining a value for the document annotation here because the c
 @Entity
 public class Customer {
 
+    @MongoId
+    private ObjectId _id;
+
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+    @Column(name="first_name")
     private String firstName;
+    @Column(name="last_name")
     private String lastName;
     private String title;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="customerId")
     private Address address;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="customerId")
     private List<Phone> phones;
+
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
+    }
 
     public String getId() {
         return id;

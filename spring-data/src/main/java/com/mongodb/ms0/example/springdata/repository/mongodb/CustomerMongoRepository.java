@@ -1,4 +1,4 @@
-package com.mongodb.ms0.example.springdata.repository;
+package com.mongodb.ms0.example.springdata.repository.mongodb;
 
 import com.mongodb.ms0.example.springdata.models.Customer;
 import org.springframework.data.mongodb.repository.Aggregation;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
-public interface CustomerRepository extends MongoRepository<Customer, String> {
+
+public interface CustomerMongoRepository extends MongoRepository<Customer, String> {
 
 
     @Aggregation(pipeline = {"{'$match': {'$or': [{'lastName': ?0}, {'firstName': ?0}]}}"})
